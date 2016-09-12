@@ -25,20 +25,20 @@
   <Import Condition=" Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets') " Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets" />
   <!-- vertag<:>end -->
   <ItemGroup>
-    <Folder Include="Templates\LinuxSmall\" />
-    <Folder Include="Templates\LinuxMedium\" />
-    <Folder Include="Templates\LinuxLarge\" />
     <Folder Include="Templates\WebApp\" />
     <Folder Include="Templates\StorageAccount\" />
     <Folder Include="Templates\SQLDatabase\" />
-    <Folder Include="Templates\WindowsLarge\" />
-    <Folder Include="Templates\WindowsMedium\" />
-    <Folder Include="Templates\WindowsSmall\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Deployment.targets">
       <Visible>False</Visible>
     </None>
+    <None Include="Templates\LinuxLarge\LinuxVirtualMachine.json" />
+    <None Include="Templates\LinuxMedium\LinuxVirtualMachine.json" />
+    <None Include="Templates\LinuxSmall\LinuxVirtualMachine.json" />
+    <None Include="Templates\WindowsLarge\azuredeploy.json" />
+    <None Include="Templates\WindowsMedium\azuredeploy.json" />
+    <None Include="Templates\WindowsSmall\azuredeploy.json" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>
