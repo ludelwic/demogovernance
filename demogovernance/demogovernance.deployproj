@@ -25,7 +25,15 @@
   <Import Condition=" Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets') " Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets" />
   <!-- vertag<:>end -->
   <ItemGroup>
-    <Folder Include="Templates\" />
+    <Folder Include="Templates\LinuxSmall\" />
+    <Folder Include="Templates\LinuxMedium\" />
+    <Folder Include="Templates\LinuxLarge\" />
+    <Folder Include="Templates\WebApp\" />
+    <Folder Include="Templates\StorageAccount\" />
+    <Folder Include="Templates\SQLDatabase\" />
+    <Folder Include="Templates\WindowsLarge\" />
+    <Folder Include="Templates\WindowsMedium\" />
+    <Folder Include="Templates\WindowsSmall\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Deployment.targets">
