@@ -8,12 +8,14 @@
         <environment names="Development">
             <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
             <link rel="stylesheet" href="~/css/site.css" />
+            <link href="~/css/caroussel.css" rel="stylesheet" />
         </environment>
         <environment names="Staging,Production">
             <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css"
                   asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
                   asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
             <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+            <link href="~/css/caroussel.css" rel="stylesheet" />
         </environment>
         @Html.ApplicationInsightsJavaScript(TelemetryConfiguration)
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
@@ -34,8 +36,14 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a asp-controller="Home" asp-action="Info">Info</a></li>
                     </ul>
                     @*@await Html.PartialAsync("_LoginPartial")*@
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a title="Gratis account" class="button button-primary" id="A1" href="https://azure.microsoft.com/nl-nl/free/" data-event="global-clicked-primarycta">Gratis account</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

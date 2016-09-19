@@ -1,8 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color:black;
-    color:whitesmoke;
+    background-color:#dedede;
+    color: #505050;
 }
 
 .jumbotron{
@@ -39,7 +39,60 @@ textarea {
     }
 }
 
-/*.row {
-  color: inherit;
-  background-color: white;
-}*/
+.jumbotron {
+    background-color:#00abec;
+    color:#fff;
+}
+
+.button.button-primary::after {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAbCAYAAAB1NA+iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuM4zml1AAAABRSURBVDhPY/j//78AEDcAsQEDuQCoOQGI348aggCjhmCCUUMwAVAzKPOBDFGAChEPQDZDNc+HChEPRjWTCEY1kwgo1QyqmdYDcT9UiATAwAAA8wwclpvxEbIAAAAASUVORK5CYII=);
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    height: 28px;
+    margin-top: -14px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    width: 16px;
+}
+.button.button-primary {
+    background-color: #89c402;
+    color: #fff;
+    position: relative;
+    padding-right: 45px;
+}
+
+.button.button-primary {
+    background-color: #a5ce00;
+}
+
+.button {
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+    background-color: #00abec;
+    border: 0;
+    color: #fff !important;
+    display: block;
+    fill: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    padding: 5px 20px 8px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: bottom;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

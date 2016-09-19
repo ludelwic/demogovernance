@@ -17,6 +17,10 @@ namespace GovernancePortal.Controllers
         {
             return View();
         }
+        public IActionResult Info()
+        {
+            return View();
+        }
 
         public IActionResult Contact()
         {
