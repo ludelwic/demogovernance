@@ -13,10 +13,8 @@ namespace GovernancePortal.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Governance()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 

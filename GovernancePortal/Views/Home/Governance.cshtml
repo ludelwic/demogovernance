@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="jumbotron">
+    <h1>Contoso's Microsoft Azure "Managed Service Catalogue"</h1>
+    <h2>Please choose what you want to deploy to the Microsoft Azure Platform</h2>
+</div>
+<div class="row" ng-controller="GovernanceController">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Size</th>
+                <th>Specs</th>
+                <th>Deploy Now</th>
+                <th>Approval required</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="template in templates">
+                <td>{{template.type}}</td>
+                <td>{{template.size}}</td>
+                <td>{{template.specs}}</td>
+                <td>
+                    <span ng-if="template.approved || !template.needsApproval">
+                        <a href="https://portal.azure.com/#create/Microsoft.Template/uri/{{template.uri}}" target="_blank"><img src="http://azuredeploy.net/deploybutton.png" /></a>
+                    </span>
+                    <span ng-if="template.needsApproval && !template.approved">
+                        <button class="btn-danger" ng-click="template.approved = true">Approve</button>
+                    </span>
+                </td>
+                <td><span ng-if="template.needsApproval">Yes</span><span ng-if="!template.needsApproval">No</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <h2>More information</h2>
+        <ul>
+            <li><a href="https://azure.microsoft.com/en-gb/documentation/articles/guidance-naming-conventions/ " target="_blank"> Naming Conventions</a></li>
+            <li><a href="https://azure.microsoft.com/en-us/documentation/articles/role-based-access-control-what-is/" target="_blank">Role Based Access Control</a></li>
+            <li><a href="https://azure.microsoft.com/en-us/documentation/articles/resource-manager-policy/ " target="_blank">Policies</a></li>
+            <li><a href="https://azure.microsoft.com/en-us/documentation/articles/resource-group-lock-resources/" target="_blank">Locks</a></li>
+            <li><a href="https://azure.microsoft.com/en-us/documentation/articles/resource-group-using-tags/" target="_blank">Tags</a></li>
+            <li><a href="http://azureplatform.azurewebsites.net/en-us/" target="_blank">Microsoft Azure Services Overview</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>Examples</h2>
+        <ul>
+            <li><a href="https://azure.microsoft.com/en-us/documentation/templates/" target="_blank">All templates</a></li>
+            <li><a href="https://github.com/Azure/azure-quickstart-templates" target="_blank">Github Azure repository</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>Track Azure consumption and control costs</h2>
+        <ul>
+            <li><a href="http://ea.azure.com" target="_blank">Azure EA portal </a></li>
+            <li><a href="https://powerbi.microsoft.com/en-us/blog/visualize-your-azure-enterprise-data-with-power-bi/" target="_blank">Power BI</a></li>
+            <li><a href="http://www.edmondek.com/" target="_blank">Usage Analytics Report</a></li>
+            <li><a href="http://portal.newsignature.com" target="_blank">newsignature.com</a></li>
+            <li><a href="http://www.hanuinsight.com/" target="_blank">hanuinsight.com</a></li>
+            <li><a href="http://www.cloudcruiser.com/" target="_blank">cloudcruiser.com</a></li>
+            <li><a href="https://azure.microsoft.com/en-us/documentation/articles/billing-usage-rate-card-overview/" target="_blank">Billing API</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>Request other service</h2>
+        <ul>
+            <li>Please contact <a href="mailto:youritsupport@yourcompany.com" target="_blank">youritsupport@yourcompany.com </a></li>
+        </ul>
+    </div>
+</div>
