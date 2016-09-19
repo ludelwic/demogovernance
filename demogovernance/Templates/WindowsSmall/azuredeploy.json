@@ -5,7 +5,7 @@
 
   "parameters": {
     "location": {
-      "type": "String",
+      "type": "string",
       "defaultValue": "West Europe"
     },
     "adminUsername": {
