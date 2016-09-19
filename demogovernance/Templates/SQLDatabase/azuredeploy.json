@@ -425,6 +425,6 @@
       "value": "[reference(concat('Microsoft.Sql/servers/', variables('sqlserverName'))).fullyQualifiedDomainName]"
     }
   }
-
+ 
 }
 
