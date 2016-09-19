@@ -33,7 +33,7 @@ govApp.controller('GovernanceController', function GovernanceController($scope) 
             {
                 type: 'Linux Server Ubuntu',
                 size: 'Medium',
-                specs: '1 CPU, 3.5 GB RAM',
+                specs: '2 CPU, 7.0 GB RAM',
                 uri: 'https%3A%2F%2Fraw.githubusercontent.com%2Fludelwic%2Fdemogovernance%2Fmaster%2Fdemogovernance%2FTemplates%2FLinuxMedium%2FLinuxVirtualMachine.json',
                 needsApproval: false
             },
