@@ -13,6 +13,7 @@
                 <th>Size</th>
                 <th>Specs</th>
                 <th>Deploy Now</th>
+                <th>Visualize</th>
                 <th>Approval required</th>
             </tr>
         </thead>
@@ -28,6 +29,9 @@
                     <span ng-if="template.needsApproval && !template.approved">
                         <button class="btn-danger" ng-click="template.approved = true">Approve</button>
                     </span>
+                </td>
+                <td>                   
+                        <a href="http://armviz.io/#/?load={{template.uri}}" target="_blank"><img src="http://armviz.io/visualizebutton.png" /></a>
                 </td>
                 <td><span ng-if="template.needsApproval">Yes</span><span ng-if="!template.needsApproval">No</span></td>
             </tr>
@@ -57,6 +61,8 @@
         <h2>Track Azure consumption and control costs</h2>
         <ul>
             <li><a href="http://ea.azure.com" target="_blank">Azure EA portal </a></li>
+            <li><a href="https://account.windowsazure.com/Home/Index" target="_blank">Azure Account portal</a></li>
+            <li><a href="http://portal.azure.com" target="_blank">Azure portal </a></li>
             <li><a href="https://powerbi.microsoft.com/en-us/blog/visualize-your-azure-enterprise-data-with-power-bi/" target="_blank">Power BI</a></li>
             <li><a href="http://www.edmondek.com/" target="_blank">Usage Analytics Report</a></li>
             <li><a href="http://portal.newsignature.com" target="_blank">newsignature.com</a></li>
