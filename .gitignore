@@ -256,3 +256,12 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+/AzureResourceGroup1/Templates/azuredeploy.parameters.json
+/AzureResourceGroup1/Templates/azuredeploysqldb.json
+/AzureResourceGroup1/Templates/azuredeploysqldbwebapp.json
+/AzureResourceGroup1/Templates/azuredeploystorage.json
+/AzureResourceGroup1
+/AzureResourceGroup2/Templates
+/AzureResourceGroup2
+/AzureResourceGroup1.sln
+/AzureResourceGroup2.sln
