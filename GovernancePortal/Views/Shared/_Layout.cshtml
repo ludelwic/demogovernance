@@ -16,8 +16,10 @@
             <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
         </environment>
         @Html.ApplicationInsightsJavaScript(TelemetryConfiguration)
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="~/js/app/governance.js"></script>    
     </head>
-    <body>
+    <body ng-app="governanceApp">
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
