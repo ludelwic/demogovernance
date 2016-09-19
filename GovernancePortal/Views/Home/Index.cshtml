@@ -2,7 +2,7 @@
     ViewData["Title"] = "Home Page";
 }
 <div class="jumbotron">
-    <h1>Managed Service Catalogue</h1>
+    <h1>Welcome to our company's Microsoft Azure "Managed Service Catalogue"</h1>
     <h2>Please choose what you want to deploy to the Microsoft Azure Platform</h2>
 </div>
 
@@ -22,7 +22,7 @@
                 <td>Windows Server 2012 R2 DE</td>
                 <td>Small</td>
                 <td>1 CPU, 3.5 GB RAM</td>
-                <td><a href="https://portal.azure.com/#create/Microsoft.Template/uri/https://raw.githubusercontent.com/ludelwic/demogovernance/master/demogovernance/Templates/WindowsSmall/azuredeploy.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png" /></a></td>
+                <td><a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fludelwic%2Fwinsmall%2Fmaster%2Fazuredeploy.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png" /></a></td>
                 <td>No</td>
             </tr>
             <tr>
@@ -49,16 +49,30 @@
             <tr>
                 <td>Linux Server Ubuntu</td>
                 <td>Medium</td>
-                <td>2 CPU, 7.0 GB RAM</td>
-                <td><a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fludelwic%2Flinmedium%2Fmaster%2FLinuxVirtualMachine.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png" /></a></td>
+                <td>1 CPU, 3.5 GB RAM</td>
+                <td><a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fludelwic%2Flinsmall%2Fmaster%2FLinuxVirtualMachine.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png" /></a></td>
                 <td>No</td>
             </tr>
             <tr>
                 <td>Linux Server Ubuntu</td>
                 <td>Large</td>
-                <td>8 CPU, 28 GB RAM</td>
-                <td><a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fludelwic%2Flinlarge%2Fmaster%2LinuxVirtualMachine.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png" /></a></td>
+                <td>1 CPU, 3.5 GB RAM</td>
+                <td><a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fludelwic%2Flinsmall%2Fmaster%2FLinuxVirtualMachine.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png" /></a></td>
                 <td>Yes</td>
+            </tr>
+            <tr>
+                <td>SQL Database</td>
+                <td>Small</td>
+                <td>5 GB</td>
+                <td><a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fludelwic%2Flinsmall%2Fmaster%2FLinuxVirtualMachine.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png" /></a></td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Storage</td>
+                <td>LRS</td>
+                <td>500 TB</td>
+                <td><a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fludelwic%2Flinsmall%2Fmaster%2FLinuxVirtualMachine.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png" /></a></td>
+                <td>No</td>
             </tr>
         </tbody>
     </table>
@@ -77,13 +91,13 @@
             <li><a href="https://azure.microsoft.com/en-gb/documentation/articles/guidance-naming-conventions/ " target="_blank"> Naming Conventions</a></li>
             <li><a href="https://azure.microsoft.com/en-us/documentation/articles/role-based-access-control-what-is/" target="_blank">Role Based Access Control</a></li>
             <li><a href="https://azure.microsoft.com/en-us/documentation/articles/resource-manager-policy/ " target="_blank">Policies</a></li>
+            <li><a href="https://azure.microsoft.com/en-us/documentation/articles/resource-group-lock-resources/" target="_blank">Locks</a></li>
+            <li><a href="https://azure.microsoft.com/en-us/documentation/articles/resource-group-using-tags/" target="_blank">Tags</a></li>
         </ul>
     </div>
     <div class="col-md-4">
         <h2>Examples</h2>
         <ul>
-            <li><a href="https://azure.microsoft.com/en-us/documentation/articles/resource-group-lock-resources/" target="_blank">Locks</a></li>
-            <li><a href="https://azure.microsoft.com/en-us/documentation/articles/resource-group-using-tags/" target="_blank">Tags</a></li>
             <li><a href="https://azure.microsoft.com/en-us/documentation/templates/" target="_blank">All templates</a></li>
             <li><a href="https://github.com/Azure/azure-quickstart-templates" target="_blank">Github Azure repository</a></li>
             <li><a href="http://azureplatform.azurewebsites.net/en-us/" target="_blank">Microsoft Azure Services Overview</a></li>
