@@ -1,6 +1,12 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color:black;
+    color:whitesmoke;
+}
+
+.jumbotron{
+    color:black;
 }
 
 /* Wrapping element */
@@ -32,3 +38,8 @@ textarea {
         z-index: 10 !important;
     }
 }
+
+/*.row {
+  color: inherit;
+  background-color: white;
+}*/
