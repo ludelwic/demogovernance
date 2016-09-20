@@ -230,6 +230,29 @@ New-AzureRmPolicyAssignment -Name "VirtualMachinePolicyAssignmentSize" -PolicyDe
 
 
 
+
+#The below policy appends costCenter tag with a predefined value if no tags are present. 
+
+{
+  "if": {
+    "field": "tags",
+    "exists": "false"
+  },
+  "then": {
+    "effect": "append",
+    "details": [
+      {
+        "field": "tags",
+        "value": {"costCenter":"myDepartment" }
+      }
+    ]
+  }
+}
+
+
+
+
+
 #Conditions can contain these values:
 #- Equals
 #- Like
@@ -243,8 +266,10 @@ New-AzureRmPolicyAssignment -Name "VirtualMachinePolicyAssignmentSize" -PolicyDe
 #- Or
 
 #Effect can be either:
-#- Deny – Denies creation of resources
-#- Audit – Audits creation of resources by logging an event to the Audit Logs
+#Policy supports three types of effect - deny, audit, and append. 
+#Deny: generates an event in the audit log and fails the request
+#Audit: generates an event in audit log but does not fail the request
+#Append: adds the defined set of fields to the request 
 
 #To specify what the policy should check, we use Field and Source. At the moment Source only supports ‘action’ which refers to an action on the resource provider. Field supports the following values:
 #- Name
