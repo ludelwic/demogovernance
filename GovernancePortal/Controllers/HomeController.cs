@@ -21,7 +21,18 @@ namespace GovernancePortal.Controllers
         {
             return View();
         }
-
+        public IActionResult RequestPage()
+        {
+            return View();
+        }
+        public IActionResult About()
+        {
+            return View();
+        }
+        public IActionResult TrackOptimize()
+        {
+            return View();
+        }
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
