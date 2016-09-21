@@ -67,7 +67,7 @@ govApp.controller('GovernanceController', function GovernanceController($scope) 
             },
             {
                 type: 'LAMP on Ubuntu',
-                size: '1 x A2 VM',
+                size: 'A2 VM',
                 specs: 'Ubunty, MySQL, Apache and PHP',
                 uri: 'https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Flamp-app%2Fazuredeploy.json',
                 needsApproval: false
