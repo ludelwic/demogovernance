@@ -58,5 +58,12 @@ govApp.controller('GovernanceController', function GovernanceController($scope) 
                 uri: 'https%3A%2F%2Fraw.githubusercontent.com%2Fludelwic%2Fdemogovernance%2Fmaster%2Fdemogovernance%2FTemplates%2FStorageAccount%2Fazuredeploystorage.json',
                 needsApproval: false
             }
+            {
+            type: 'SQL Server AlwaysOn',
+            size: 'Medium',
+            specs: '5 VMs',
+            uri: 'https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fsqlvm-alwayson-cluster%2Fazuredeploy.json',
+            needsApproval: true
+        }
     ];
 });
