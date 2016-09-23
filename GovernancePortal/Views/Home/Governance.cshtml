@@ -6,34 +6,62 @@
     <h2>Please choose what you want to deploy to the Microsoft Azure Platform</h2>
     <h4>Note that this is just an extreme small subset of what is possible on the Azure platform.</h4>
 </div>
-<div class="row" ng-controller="GovernanceController">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Type</th>
-                <th>Size</th>
-                <th>Specs</th>
-                <th>Deploy Now</th>
-                <th>Visualize</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="template in templates">
-                <td>{{template.type}}</td>
-                <td>{{template.size}}</td>
-                <td>{{template.specs}}</td>
-                <td>
-                    <span ng-if="template.approved || !template.needsApproval">
-                        <a href="https://portal.azure.com/#create/Microsoft.Template/uri/{{template.uri}}" target="_blank"><img src="http://azuredeploy.net/deploybutton.png" /></a>
-                    </span>
-                    <span ng-if="template.needsApproval && !template.approved">
-                        <button class="btn-danger" ng-click="template.approved = true">Approve</button>
-                    </span>
-                </td>
-                <td>                   
-                        <a href="http://armviz.io/#/?load={{template.uri}}" target="_blank"><img src="http://armviz.io/visualizebutton.png" /></a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div ng-controller="GovernanceController">
+    <div class="row">
+        <div class="btn-group pull-right">
+            <button type="button" ng-class="['btn', 'btn-default', showTable ? 'active' : '']" ng-click="changeView()"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></button>
+            <button type="button" ng-class="['btn', 'btn-default', !showTable ? 'active' : '']" ng-click="changeView()"><span class="glyphicon glyphicon-th" aria-hidden="true"></span></button>
+        </div>
+    </div>
+    <div class="row" ng-show="showTable">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Size</th>
+                    <th>Specs</th>
+                    <th>Deploy Now</th>
+                    <th>Visualize</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="template in templates">
+                    <td>{{template.type}}</td>
+                    <td>{{template.size}}</td>
+                    <td>{{template.specs}}</td>
+                    <td>
+                        <span ng-if="template.approved || !template.needsApproval">
+                            <a href="https://portal.azure.com/#create/Microsoft.Template/uri/{{template.uri}}" target="_blank"><img src="~/images/deploybutton.png" /></a>
+                        </span>
+                        <span ng-if="template.needsApproval && !template.approved">
+                            <button class="btn-danger" ng-click="template.approved = true">Approve</button>
+                        </span>
+                    </td>
+                    <td>
+                        <a href="http://armviz.io/#/?load={{template.uri}}" target="_blank">
+                            <img src="~/images/visualizebutton.png" />
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row" ng-show="!showTable">
+        <div class="col-md-4 panel panel-default" ng-repeat="template in templates">
+            <div class="panel-heading"><h3>{{template.type}}</h3></div>
+            <div class="panel-body">
+                <div>{{template.size}}</div>
+                <div>{{template.specs}}</div>
+                <div ng-if="template.approved || !template.needsApproval" class="row">
+                    <a class="col-lg-6" href="https://portal.azure.com/#create/Microsoft.Template/uri/{{template.uri}}" target="_blank"><img src="~/images/deploybutton.png" /></a>
+                    <a class="col-lg-6" href="http://armviz.io/#/?load={{template.uri}}" target="_blank"><img src="~/images/visualizebutton.png" /></a>
+                </div>
+                <div ng-if="template.needsApproval && !template.approved">
+                    <button class="btn-danger" ng-click="template.approved = true">Approve</button>
+                    <a href="http://armviz.io/#/?load={{template.uri}}" target="_blank"><img src="~/images/visualizebutton.png" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

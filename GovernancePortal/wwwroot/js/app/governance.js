@@ -89,4 +89,10 @@ govApp.controller('GovernanceController', function GovernanceController($scope) 
             }
         
     ];
+
+    $scope.showTable = true;
+
+    $scope.changeView = function () {
+        $scope.showTable = !$scope.showTable;
+    };
 });
