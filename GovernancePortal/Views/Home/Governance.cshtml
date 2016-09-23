@@ -9,8 +9,8 @@
 <div ng-controller="GovernanceController">
     <div class="row">
         <div class="btn-group pull-right">
-            <button type="button" ng-class="['btn', 'btn-default', showTable ? 'active' : '']" ng-click="changeView()"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></button>
             <button type="button" ng-class="['btn', 'btn-default', !showTable ? 'active' : '']" ng-click="changeView()"><span class="glyphicon glyphicon-th" aria-hidden="true"></span></button>
+            <button type="button" ng-class="['btn', 'btn-default', showTable ? 'active' : '']" ng-click="changeView()"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></button>
         </div>
     </div>
     <div class="row" ng-show="showTable">
@@ -47,18 +47,20 @@
         </table>
     </div>
     <div class="row" ng-show="!showTable">
-        <div class="col-md-4 panel panel-default" ng-repeat="template in templates">
-            <div class="panel-heading"><h3>{{template.type}}</h3></div>
-            <div class="panel-body">
-                <div>{{template.size}}</div>
-                <div>{{template.specs}}</div>
-                <div ng-if="template.approved || !template.needsApproval" class="row">
-                    <a class="col-lg-6" href="https://portal.azure.com/#create/Microsoft.Template/uri/{{template.uri}}" target="_blank"><img src="~/images/deploybutton.png" /></a>
-                    <a class="col-lg-6" href="http://armviz.io/#/?load={{template.uri}}" target="_blank"><img src="~/images/visualizebutton.png" /></a>
-                </div>
-                <div ng-if="template.needsApproval && !template.approved">
-                    <button class="btn-danger" ng-click="template.approved = true">Approve</button>
-                    <a href="http://armviz.io/#/?load={{template.uri}}" target="_blank"><img src="~/images/visualizebutton.png" /></a>
+        <div class="col-lg-4 col-md-6 col-sm-12" ng-repeat="template in templates">
+            <div class="card card-resource">
+                <div class="text-heading5">{{template.type}}</div>
+                <div>
+                    <div>{{template.size}}</div>
+                    <div>{{template.specs}}</div>
+                    <div ng-if="template.approved || !template.needsApproval" class="row">
+                        <a class="col-lg-6" href="https://portal.azure.com/#create/Microsoft.Template/uri/{{template.uri}}" target="_blank"><img src="~/images/deploybutton.png" /></a>
+                        <a class="col-lg-6" href="http://armviz.io/#/?load={{template.uri}}" target="_blank"><img src="~/images/visualizebutton.png" /></a>
+                    </div>
+                    <div ng-if="template.needsApproval && !template.approved">
+                        <button class="btn-danger" ng-click="template.approved = true">Approve</button>
+                        <a href="http://armviz.io/#/?load={{template.uri}}" target="_blank"><img src="~/images/visualizebutton.png" /></a>
+                    </div>
                 </div>
             </div>
         </div>

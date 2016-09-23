@@ -86,6 +86,30 @@ a {
     font-size:24px
 } 
 
+.card-resource {
+    margin: 12px 0;
+}
+
+.card {
+    background-color: #fff;
+    display: block;
+    padding: 12px;
+}
+
+/*@media only screen and (min-width:768px)*/
+h5, .text-heading5 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33;
+    margin: 0 0 8px;
+    color: #00abec;
+}
+
+.card .meta {
+    color: #969696;
+    font-size: 12px;
+    margin-top: 12px;
+}
 
 
 
