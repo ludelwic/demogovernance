@@ -36,6 +36,7 @@
     <None Include="Templates\LinuxLarge\LinuxVirtualMachine.json" />
     <None Include="Templates\LinuxMedium\LinuxVirtualMachine.json" />
     <None Include="Templates\LinuxSmall\LinuxVirtualMachine.json" />
+    <None Include="Templates\UbuntuDocker\ubuntudocker.json" />
     <None Include="Templates\WindowsLarge\azuredeploy.json" />
     <None Include="Templates\WindowsMedium\azuredeploy.json" />
     <None Include="Templates\WindowsSmall\azuredeploy.json" />

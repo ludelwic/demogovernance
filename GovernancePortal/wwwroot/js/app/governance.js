@@ -78,19 +78,24 @@ govApp.controller('GovernanceController', function GovernanceController($scope) 
                 specs: '500TB',
                 uri: 'https%3A%2F%2Fraw.githubusercontent.com%2Fludelwic%2Fdemogovernance%2Fmaster%2Fdemogovernance%2FTemplates%2FStorageAccount%2Fazuredeploystorage.json',
                 needsApproval: false
-            }
-            ,
+            },
             {
                 type: 'Virtual Network',
                 size: 'Standard',
                 specs: '2 subnets',
                 uri: 'https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-vnet-two-subnets%2Fazuredeploy.json',
                 needsApproval: false
-            }
-        
+            },
+            {
+                type: 'Ubuntu with Docker',
+                size: 'Standard F1',
+                specs: '1 CPU, 2GB',
+                uri: 'https%3A%2F%2Fraw.githubusercontent.com%2Fludelwic%2Fdemogovernance%2Fmaster%2Fdemogovernance%2FTemplates%2FUbuntuDocker%2Fubuntudocker.json',
+                needsApproval: true
+            }        
     ];
 
-    $scope.showTable = true;
+    $scope.showTable = false;
 
     $scope.changeView = function () {
         $scope.showTable = !$scope.showTable;
