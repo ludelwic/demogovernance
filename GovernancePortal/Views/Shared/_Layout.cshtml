@@ -30,13 +30,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
-                    <a asp-controller="Home" asp-action="Index" class="navbar-brand">GovernancePortal</a>
-                </div>
+                    </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li><a asp-controller="Home" asp-action="Info">Info</a></li>
+                        <li><a asp-controller="Home" asp-action="Info">Govern</a></li>
+                        <li><a asp-controller="Home" asp-action="Governance">Deploy</a></li>
+                        <li><a asp-controller="Home" asp-action="TrackOptimize">Track and Optimize</a></li>
+                        <li><a asp-controller="Home" asp-action="Requestpage">Need Other Service?</a></li>
+                        <li><a asp-controller="Home" asp-action="About">About</a></li>
                     </ul>
                     @*@await Html.PartialAsync("_LoginPartial")*@
                     <ul class="nav navbar-nav navbar-right">
