@@ -6,11 +6,21 @@
     <h2>Please choose what you want to deploy to the Microsoft Azure Platform</h2>
     <h4>Note that this is just an extreme small subset of what is possible on the Azure platform.</h4>
 </div>
-<div ng-controller="GovernanceController">
+<div ng-controller="GovernanceController" ng-cloak>
     <div class="row">
-        <div class="btn-group pull-right">
-            <button type="button" ng-class="['btn', 'btn-default', !showTable ? 'active' : '']" ng-click="changeView()"><span class="glyphicon glyphicon-th" aria-hidden="true"></span></button>
-            <button type="button" ng-class="['btn', 'btn-default', showTable ? 'active' : '']" ng-click="changeView()"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></button>
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </span>
+                <input type="text" class="form-control" placeholder="filter" ng-model="filter" />
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="btn-group pull-right">
+                <button type="button" ng-class="['btn', 'btn-default', !showTable ? 'active' : '']" ng-click="changeView()"><span class="glyphicon glyphicon-th" aria-hidden="true"></span></button>
+                <button type="button" ng-class="['btn', 'btn-default', showTable ? 'active' : '']" ng-click="changeView()"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></button>
+            </div>
         </div>
     </div>
     <div class="row" ng-show="showTable">
@@ -47,7 +57,7 @@
         </table>
     </div>
     <div class="row" ng-show="!showTable">
-        <div class="col-lg-4 col-md-6 col-sm-12" ng-repeat="template in templates">
+        <div class="col-lg-4 col-md-6 col-sm-12" ng-repeat="template in templates | filter: filter">
             <div class="card card-resource">
                 <div class="text-heading5">{{template.type}}</div>
                 <div>
