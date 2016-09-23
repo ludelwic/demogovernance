@@ -2,7 +2,11 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background-color:#dedede;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
     color: #505050;
+    font-family: "Segoe UI Condensed","Segoe UI","Segoe WP",Tahoma,Arial,sans-serif;
 }
 
 .jumbotron{
@@ -82,9 +86,7 @@ textarea {
     text-decoration: none;
     vertical-align: bottom;
 }
-a {
-    font-size:24px
-} 
+
 
 .card-resource {
     margin: 12px 0;
@@ -110,6 +112,91 @@ h5, .text-heading5 {
     font-size: 12px;
     margin-top: 12px;
 }
+
+.section {
+    display: block;
+    padding: 48px 0;
+    width: 100%;
+}
+
+.section + .section {
+    border-top: 1px solid #eee;
+}
+
+.section {
+    background-color: #fff;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #505050;
+    overflow: hidden;
+    position: relative;
+}
+.section-slate09 {
+    background-color: #eee;
+}
+.section + .section-slate09 {
+    border-top: none;
+}
+
+section {
+    clear: both;
+}
+/*@media only screen and (min-width:768px)*/
+h2, .text-heading2 {
+    font-weight: 200;
+    font-size: 34px;
+    line-height: 1.18;
+    margin: 0 0 12px;
+}
+
+.section ul {
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+.section a:hover {
+    color: #0072c6;
+}
+a {
+    -webkit-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+    text-decoration: none;
+}
+.section a {
+    color: #00abec;
+}
+
+
+.icon {
+    display: inline-block;
+    height: 48px;
+    line-height: 0;
+    vertical-align: middle;
+    width: 48px;
+}
+
+.icon {
+    display: inline-block;
+    height: 50px;
+    max-width: 100%;
+    vertical-align: bottom;
+    width: 50px;
+}
+h3 .icon {
+    height: 20px;
+    margin-top: 3px;
+    vertical-align: top;
+    width: 20px;
+}
+.icon svg {
+    height: 100%;
+    width: 100%;
+}
+
 
 
 
