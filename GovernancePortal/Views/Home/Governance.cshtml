@@ -2,7 +2,7 @@
     ViewData["Title"] = "Home Page";
 }
 <div class="jumbotron">
-    <h1>Contoso's Service Catalogue</h1>
+    <h1>Contoso's DEMO Service Catalogue</h1>
     <h2>Please choose what you want to deploy to the Microsoft Azure Platform</h2>
     <h4>Note that this is just an extreme small subset of what is possible on the Azure platform.</h4>
 </div>
@@ -30,6 +30,7 @@
                     <th>Type</th>
                     <th>Size</th>
                     <th>Specs</th>
+                    <th>Internal Pricing</th>
                     <th>Deploy Now</th>
                     <th>Visualize</th>
                 </tr>
@@ -39,6 +40,7 @@
                     <td>{{template.type}}</td>
                     <td>{{template.size}}</td>
                     <td>{{template.specs}}</td>
+                    <td>{{template.internalprice}}</td>
                     <td>
                         <span ng-if="template.approved || !template.needsApproval">
                             <a href="https://portal.azure.com/#create/Microsoft.Template/uri/{{template.uri}}" target="_blank"><img src="~/images/deploybutton.png" /></a>
@@ -63,6 +65,7 @@
                 <div>
                     <div>{{template.size}}</div>
                     <div>{{template.specs}}</div>
+                    <div>{{template.internalprice}}</div>
                     <div ng-if="template.approved || !template.needsApproval" class="row">
                         <a class="col-lg-6" href="https://portal.azure.com/#create/Microsoft.Template/uri/{{template.uri}}" target="_blank"><img src="~/images/deploybutton.png" /></a>
                         <a class="col-lg-6" href="http://armviz.io/#/?load={{template.uri}}" target="_blank"><img src="~/images/visualizebutton.png" /></a>
