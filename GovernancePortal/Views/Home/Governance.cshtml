@@ -46,6 +46,9 @@
                             <a href="https://portal.azure.com/#create/Microsoft.Template/uri/{{template.uri}}" target="_blank"><img src="~/images/deploybutton.png" /></a>
                         </span>
                         <span ng-if="template.needsApproval && !template.approved">
+                            <button class="btn-default" ng-click="template.approved = false">Request</button>
+                        </span>
+                         <span ng-if="template.needsApproval && !template.approved">
                             <button class="btn-danger" ng-click="template.approved = true">Approve</button>
                         </span>
                     </td>
@@ -71,6 +74,7 @@
                         <a class="col-lg-6" href="http://armviz.io/#/?load={{template.uri}}" target="_blank"><img src="~/images/visualizebutton.png" /></a>
                     </div>
                     <div ng-if="template.needsApproval && !template.approved">
+                        <button class="btn-default" ng-click="template.approved = false"><a href="mailto:youritsupport@contoso.com?subject=Request Approval Service Catalogue Item" target="_blank"> Request </a></button>
                         <button class="btn-danger" ng-click="template.approved = true">Approve</button>
                         <a href="http://armviz.io/#/?load={{template.uri}}" target="_blank"><img src="~/images/visualizebutton.png" /></a>
                     </div>

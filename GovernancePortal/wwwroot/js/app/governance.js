@@ -86,7 +86,7 @@ govApp.controller('GovernanceController', function GovernanceController($scope) 
             {
                 type: 'LAMP on Ubuntu',
                 size: 'A2 VM',
-                specs: 'Ubunty, MySQL, Apache and PHP',
+                specs: 'Ubuntu,MySQL,Apache,PHP',
                 internalprice: '€175/month (Internal Contoso Pricing)',
                 uri: 'https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Flamp-app%2Fazuredeploy.json',
                 needsApproval: false,
