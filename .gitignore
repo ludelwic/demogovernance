@@ -265,3 +265,5 @@ paket-files/
 /AzureResourceGroup2
 /AzureResourceGroup1.sln
 /AzureResourceGroup2.sln
+/GovernancePortal/Service References/Application Insights
+/GovernancePortal/Properties/PublishProfiles/gov-publish.ps1
