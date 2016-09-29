@@ -43,18 +43,18 @@
                     <td>{{template.internalprice}}</td>
                     <td>
                         <span ng-if="template.approved || !template.needsApproval">
-                            <a href="https://portal.azure.com/#create/Microsoft.Template/uri/{{template.uri}}" target="_blank"><img src="~/images/deploybutton.png" /></a>
+                            <a class="btn btn-azure" href="https://portal.azure.com/#create/Microsoft.Template/uri/{{template.uri}}" target="_blank"><img src="~/images/cloud.png" /> Deploy to Azure</a>
                         </span>
                         <span ng-if="template.needsApproval && !template.approved">
-                            <button class="btn-default" ng-click="template.approved = false">Request</button>
+                            <button class="btn btn-default" ng-click="template.approved = false">Request</button>
                         </span>
                          <span ng-if="template.needsApproval && !template.approved">
-                            <button class="btn-danger" ng-click="template.approved = true">Approve</button>
+                            <button class="btn btn-danger" ng-click="template.approved = true">Approve</button>
                         </span>
                     </td>
                     <td>
-                        <a href="http://armviz.io/#/?load={{template.uri}}" target="_blank">
-                            <img src="~/images/visualizebutton.png" />
+                        <a class="btn btn-azure" href="http://armviz.io/#/?load={{template.uri}}" target="_blank">
+                            <img src="~/images/cloud.png" /> Visualize
                         </a>
                     </td>
                 </tr>
@@ -69,14 +69,14 @@
                     <div>{{template.size}}</div>
                     <div>{{template.specs}}</div>
                     <div>{{template.internalprice}}</div>
-                    <div ng-if="template.approved || !template.needsApproval" class="row">
-                        <a class="col-lg-6" href="https://portal.azure.com/#create/Microsoft.Template/uri/{{template.uri}}" target="_blank"><img src="~/images/deploybutton.png" /></a>
-                        <a class="col-lg-6" href="http://armviz.io/#/?load={{template.uri}}" target="_blank"><img src="~/images/visualizebutton.png" /></a>
+                    <div ng-if="template.approved || !template.needsApproval">
+                        <a class="btn btn-azure" href="https://portal.azure.com/#create/Microsoft.Template/uri/{{template.uri}}" target="_blank"><img src="~/images/cloud.png" /> Deploy to Azure</a>
+                        <a class="btn btn-azure" href="http://armviz.io/#/?load={{template.uri}}" target="_blank"><img src="~/images/cloud.png" /> Visualize</a>
                     </div>
                     <div ng-if="template.needsApproval && !template.approved">
-                        <button class="btn-default" ng-click="template.approved = false"><a href="mailto:youritsupport@contoso.com?subject=Request Approval Service Catalogue Item" target="_blank"> Request </a></button>
-                        <button class="btn-danger" ng-click="template.approved = true">Approve</button>
-                        <a href="http://armviz.io/#/?load={{template.uri}}" target="_blank"><img src="~/images/visualizebutton.png" /></a>
+                        <button class="btn btn-default" ng-click="template.approved = false"><a href="mailto:youritsupport@contoso.com?subject=Request Approval Service Catalogue Item" target="_blank"> Request </a></button>
+                        <button class="btn btn-danger" ng-click="template.approved = true">Approve</button>
+                        <a class="btn btn-azure" href="http://armviz.io/#/?load={{template.uri}}" target="_blank"><img src="~/images/cloud.png" /> Visualize</a>
                     </div>
                 </div>
             </div>
