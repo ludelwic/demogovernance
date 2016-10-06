@@ -267,3 +267,6 @@ paket-files/
 /AzureResourceGroup2.sln
 /GovernancePortal/Service References/Application Insights
 /GovernancePortal/Properties/PublishProfiles/gov-publish.ps1
+/AzureResourceGroup9
+/.gitattributes
+/AzureResourceGroup9.sln
